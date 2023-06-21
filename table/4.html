@@ -103,7 +103,7 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#47">store_id</a>&nbsp;</td>
+	<td><a href="#52">store_id</a>&nbsp;</td>
 	<td>store_id&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
@@ -112,7 +112,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#59">store_name</a>&nbsp;</td>
+	<td><a href="#66">store_name</a>&nbsp;</td>
 	<td>store_name&nbsp;</td>
 	<td>varchar(20)&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -121,7 +121,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#60">description</a>&nbsp;</td>
+	<td><a href="#67">description</a>&nbsp;</td>
 	<td>description&nbsp;</td>
 	<td>text&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -130,7 +130,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#61">star_up</a>&nbsp;</td>
+	<td><a href="#68">star_up</a>&nbsp;</td>
 	<td>star_up&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -139,7 +139,7 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#62">ranking</a>&nbsp;</td>
+	<td><a href="#69">ranking</a>&nbsp;</td>
 	<td>ranking&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">&nbsp;</td>
@@ -147,8 +147,35 @@ function asd() {
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#70">tel</a>&nbsp;</td>
+	<td>tel&nbsp;</td>
+	<td>varchar(20)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#71">address</a>&nbsp;</td>
+	<td>address&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#72">manager</a>&nbsp;</td>
+	<td>manager&nbsp;</td>
+	<td>varchar(20)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#63">id</a>&nbsp;</td>
+	<td><a href="#73">id</a>&nbsp;</td>
 	<td>id&nbsp;</td>
 	<td>int unsigned&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
@@ -177,9 +204,9 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#63">id&nbsp;</a></td>
+	<td><a href="#73">id&nbsp;</a></td>
 	<td><a href="../table/6.html">ユーザーテーブル&nbsp;</a></td>
-	<td><a href="../table/6.html#64">id&nbsp;</a></td>
+	<td><a href="../table/6.html#74">id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -207,54 +234,54 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#47">store_id&nbsp;</a></td>
+	<td><a href="#52">store_id&nbsp;</a></td>
 	<td><a href="../table/0.html">店舗記事テーブル&nbsp;</a></td>
-	<td><a href="../table/0.html#46">store_id&nbsp;</a></td>
+	<td><a href="../table/0.html#51">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#47">store_id&nbsp;</a></td>
+	<td><a href="#52">store_id&nbsp;</a></td>
 	<td><a href="../table/1.html">join_stores&nbsp;</a></td>
-	<td><a href="../table/1.html#51">store_id&nbsp;</a></td>
+	<td><a href="../table/1.html#58">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#47">store_id&nbsp;</a></td>
+	<td><a href="#52">store_id&nbsp;</a></td>
 	<td><a href="../table/2.html">新規テーブル&nbsp;</a></td>
-	<td><a href="../table/2.html#55">store_id&nbsp;</a></td>
+	<td><a href="../table/2.html#62">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#47">store_id&nbsp;</a></td>
+	<td><a href="#52">store_id&nbsp;</a></td>
 	<td><a href="../table/3.html">新規テーブル&nbsp;</a></td>
-	<td><a href="../table/3.html#58">store_id&nbsp;</a></td>
+	<td><a href="../table/3.html#65">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#47">store_id&nbsp;</a></td>
+	<td><a href="#52">store_id&nbsp;</a></td>
 	<td><a href="../table/5.html">新規テーブル&nbsp;</a></td>
-	<td><a href="../table/5.html#65">store_id&nbsp;</a></td>
+	<td><a href="../table/5.html#75">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
 	<td align="center">1..n&nbsp;</td>
 </tr>
 <tr>
-	<td><a href="#47">store_id&nbsp;</a></td>
+	<td><a href="#52">store_id&nbsp;</a></td>
 	<td><a href="../table/7.html">user_wentstores&nbsp;</a></td>
-	<td><a href="../table/7.html#66">store_id&nbsp;</a></td>
+	<td><a href="../table/7.html#76">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -315,7 +342,7 @@ function asd() {
 	</tr>
 </table>
 
-<a name="47"></a>
+<a name="52"></a>
 <h3><img src="../image/icons/pkey.gif">  store_id</h3>
 
 <dl>
@@ -336,7 +363,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="59"></a>
+<a name="66"></a>
 <h3>  store_name</h3>
 
 <dl>
@@ -357,7 +384,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="60"></a>
+<a name="67"></a>
 <h3>  description</h3>
 
 <dl>
@@ -378,7 +405,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="61"></a>
+<a name="68"></a>
 <h3>  star_up</h3>
 
 <dl>
@@ -399,7 +426,7 @@ function asd() {
 <p>
 
 <hr>
-<a name="62"></a>
+<a name="69"></a>
 <h3>  ranking</h3>
 
 <dl>
@@ -420,7 +447,70 @@ function asd() {
 <p>
 
 <hr>
-<a name="63"></a>
+<a name="70"></a>
+<h3>  tel</h3>
+
+<dl>
+	<dd>tel
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(20)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="71"></a>
+<h3>  address</h3>
+
+<dl>
+	<dd>address
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="72"></a>
+<h3>  manager</h3>
+
+<dl>
+	<dd>manager
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>FALSE<br></dt>
+		<dt><b>型 : </b>varchar(20)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="73"></a>
 <h3> <img src="../image/icons/foreign_key.gif"> id</h3>
 
 <dl>
