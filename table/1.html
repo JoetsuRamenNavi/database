@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>新規テーブル</title>
+		<title>join_stores</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css" title="Style">
 	</head>
 <script>
 function asd() {
-	parent.document.title="新規テーブル";
+	parent.document.title="join_stores";
 }
 </script>
 
@@ -62,13 +62,13 @@ function asd() {
 
 		<hr>
 		<a name="main"></a>
-		<h2>テーブル   新規テーブル</h2>
+		<h2>テーブル   join_stores</h2>
 		<hr>
 
 
 <dl>
 	<dt><b>物理名:</b></dt>
-		<dd>mens<br><br></dd>
+		<dd>join_stores<br><br></dd>
 </dl>
 
 <dl>
@@ -103,8 +103,8 @@ function asd() {
 	<tr>
 	<td align="center"><img src="../image/icons/pkey.gif">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#37">id</a>&nbsp;</td>
-	<td>id&nbsp;</td>
+	<td><a href="#48">join_id</a>&nbsp;</td>
+	<td>join_id&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
@@ -112,16 +112,25 @@ function asd() {
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center">&nbsp;</td>
-	<td><a href="#38">men</a>&nbsp;</td>
-	<td>men&nbsp;</td>
-	<td>varchar(10)&nbsp;</td>
+	<td><a href="#49">battle_name</a>&nbsp;</td>
+	<td>battle_name&nbsp;</td>
+	<td>varchar(50)&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td align="center">NOT NULL&nbsp;</td>
+</tr>
+<tr>
+	<td align="center">&nbsp;</td>
+	<td align="center">&nbsp;</td>
+	<td><a href="#50">battle_term</a>&nbsp;</td>
+	<td>battle_term&nbsp;</td>
+	<td>varchar(20)&nbsp;</td>
 	<td align="center">&nbsp;</td>
 	<td align="center">NOT NULL&nbsp;</td>
 </tr>
 <tr>
 	<td align="center">&nbsp;</td>
 	<td align="center"><img src="../image/icons/foreign_key.gif">&nbsp;</td>
-	<td><a href="#39">store_id</a>&nbsp;</td>
+	<td><a href="#51">store_id</a>&nbsp;</td>
 	<td>store_id&nbsp;</td>
 	<td>int&nbsp;</td>
 	<td align="center">UNIQUE&nbsp;</td>
@@ -150,9 +159,9 @@ function asd() {
 		<th width="12%">子の多重度</th>
 	</tr>
 	<tr>
-	<td><a href="#39">store_id&nbsp;</a></td>
-	<td><a href="../table/3.html">ストアテーブル&nbsp;</a></td>
-	<td><a href="../table/3.html#36">store_id&nbsp;</a></td>
+	<td><a href="#51">store_id&nbsp;</a></td>
+	<td><a href="../table/4.html">ストアテーブル&nbsp;</a></td>
+	<td><a href="../table/4.html#47">store_id&nbsp;</a></td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">RESTRICT&nbsp;</td>
 	<td align="center">1&nbsp;</td>
@@ -179,7 +188,16 @@ function asd() {
 		<th width="12%">親の多重度</th>
 		<th width="12%">子の多重度</th>
 	</tr>
-	
+	<tr>
+	<td><a href="#48">join_id&nbsp;</a></td>
+	<td><a href="../table/8.html">votes&nbsp;</a></td>
+	<td><a href="../table/8.html#52">join_id&nbsp;</a></td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">RESTRICT&nbsp;</td>
+	<td align="center">1&nbsp;</td>
+	<td align="center">1..n&nbsp;</td>
+</tr>
+
 </table>
 
 <p>
@@ -234,11 +252,11 @@ function asd() {
 	</tr>
 </table>
 
-<a name="37"></a>
-<h3><img src="../image/icons/pkey.gif">  id</h3>
+<a name="48"></a>
+<h3><img src="../image/icons/pkey.gif">  join_id</h3>
 
 <dl>
-	<dd>id
+	<dd>join_id
 	<p>
 	<dd><pre></pre>
 	<p>
@@ -255,18 +273,18 @@ function asd() {
 <p>
 
 <hr>
-<a name="38"></a>
-<h3>  men</h3>
+<a name="49"></a>
+<h3>  battle_name</h3>
 
 <dl>
-	<dd>men
+	<dd>battle_name
 	<p>
 	<dd><pre></pre>
 	<p>
 	<dl>
 		<dt><b>UNIQUE : </b>FALSE<br></dt>
 		<dt><b>NOT NULL : </b>TRUE<br></dt>
-		<dt><b>型 : </b>varchar(10)<br></dt>
+		<dt><b>型 : </b>varchar(50)<br></dt>
 		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
 		<dt><b>デフォルト値 : </b><br></dt>
 		<dt><b>制約 : </b><br></dt>
@@ -276,7 +294,28 @@ function asd() {
 <p>
 
 <hr>
-<a name="39"></a>
+<a name="50"></a>
+<h3>  battle_term</h3>
+
+<dl>
+	<dd>battle_term
+	<p>
+	<dd><pre></pre>
+	<p>
+	<dl>
+		<dt><b>UNIQUE : </b>FALSE<br></dt>
+		<dt><b>NOT NULL : </b>TRUE<br></dt>
+		<dt><b>型 : </b>varchar(20)<br></dt>
+		<dt><b>AUTO INCREMENT : </b>FALSE<br></dt>
+		<dt><b>デフォルト値 : </b><br></dt>
+		<dt><b>制約 : </b><br></dt>
+	</dl>
+</dl>
+
+<p>
+
+<hr>
+<a name="51"></a>
 <h3> <img src="../image/icons/foreign_key.gif"> store_id</h3>
 
 <dl>
